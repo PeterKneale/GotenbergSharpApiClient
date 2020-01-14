@@ -13,7 +13,7 @@ namespace Gotenberg.Sharp.API.Client.Domain.Builders
         public PdfRequestBuilder() => Request = new PdfRequest();
 
         [PublicAPI]
-        public DocumentBuilder Document=> new DocumentBuilder(Request);
+        public DocumentBuilder Document => new DocumentBuilder(Request);
 
         [PublicAPI]
         public DimensionBuilder<PdfRequest> Dimensions => new DimensionBuilder<PdfRequest>(Request);

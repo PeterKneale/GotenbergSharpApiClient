@@ -25,7 +25,6 @@ namespace Gotenberg.Sharp.API.Client.Domain.Requests
         ///     conversion unsuccessful and return a 504 HTTP code. This overrides the
         ///     the container's DEFAULT_WAIT_TIMEOUT environment variable
         /// </summary>
-       
         public float? TimeOut
         {
             get => _timeOut;
@@ -42,7 +41,6 @@ namespace Gotenberg.Sharp.API.Client.Domain.Requests
         ///     Use If/when the Gotenberg API returns a 400 response with the message "increase the Google Chrome rpcc buffer size"
         /// </remarks>
         public int? ChromeRpccBufferSize { get; set; }
-
         
         /// <summary>
         /// If provided, the API will return the resulting PDF file with the given filename. Otherwise a random filename is used.

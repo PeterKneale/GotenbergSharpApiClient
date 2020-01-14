@@ -10,8 +10,10 @@ using JetBrains.Annotations;
 
 namespace Gotenberg.Sharp.API.Client.Domain.Builders
 {
+    [PublicAPI]
     public class DocumentBuilder : PdfRequestBuilder
     {
+        [PublicAPI]
         public DocumentBuilder(PdfRequest request)
         {
             this.Request = request;
@@ -71,10 +73,10 @@ namespace Gotenberg.Sharp.API.Client.Domain.Builders
         public DocumentBuilder AddFooter(string body) => AddFooter(new ContentItem(body));
 
         [PublicAPI]
-        public DocumentBuilder AddFooter(byte[] body) =>  AddFooter(new ContentItem(body));
+        public DocumentBuilder AddFooter(byte[] body) => AddFooter(new ContentItem(body));
 
         [PublicAPI]
-        public DocumentBuilder AddFooter(Stream body) =>  AddFooter(new ContentItem(body));
+        public DocumentBuilder AddFooter(Stream body) => AddFooter(new ContentItem(body));
         
         #endregion
 

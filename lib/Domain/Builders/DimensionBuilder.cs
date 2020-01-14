@@ -5,8 +5,10 @@ using JetBrains.Annotations;
 
 namespace Gotenberg.Sharp.API.Client.Domain.Builders
 {
+    [PublicAPI]
     public class DimensionBuilder<TRequest> : BaseBuilder<TRequest> where TRequest: class, IDimensional
     {
+        [PublicAPI]
         public DimensionBuilder(TRequest request)
         {
             this.Request = request;

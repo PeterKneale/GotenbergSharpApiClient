@@ -7,8 +7,10 @@ using JetBrains.Annotations;
 
 namespace Gotenberg.Sharp.API.Client.Domain.Builders
 {
+    [PublicAPI]
     public sealed class ConfigBuilder<TRequest> : BaseBuilder<TRequest> where TRequest: class, IConfigureRequests
     {
+        [PublicAPI]
         public ConfigBuilder(TRequest request)
         {
             this.Request = request;

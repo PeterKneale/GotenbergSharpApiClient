@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 
 namespace Gotenberg.Sharp.API.Client.Domain.Builders
 {
+    [PublicAPI]
     public class UrlRequestBuilder: BaseBuilder<UrlRequest>
     {
         [PublicAPI]
