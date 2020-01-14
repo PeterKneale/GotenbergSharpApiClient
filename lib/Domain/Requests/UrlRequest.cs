@@ -12,7 +12,7 @@ namespace Gotenberg.Sharp.API.Client.Domain.Requests
     /// For URL to PDF conversions
     /// </summary>
   
-    public sealed class UrlRequest : IConvertToHttpContent
+    public sealed class UrlRequest : IConvertToHttpContent, IDimensional, IConfigureRequests
     {
         [UsedImplicitly]
         public Uri Url { get; set; }
@@ -21,7 +21,7 @@ namespace Gotenberg.Sharp.API.Client.Domain.Requests
         public DocumentDimensions Dimensions { get; set; } = DocumentDimensions.ToChromeDefaults();
 
         [UsedImplicitly]
-        public HttpMessageConfig Config { get; set; } = new HttpMessageConfig();
+        public RequestConfig Config { get; set; } = new RequestConfig();
         
         [UsedImplicitly]
         public KeyValuePair<string, string> RemoteUrlHeader { get; set; }

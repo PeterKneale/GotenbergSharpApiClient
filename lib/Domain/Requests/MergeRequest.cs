@@ -13,12 +13,11 @@ namespace Gotenberg.Sharp.API.Client.Domain.Requests
     /// </summary>
     public sealed class MergeRequest : IMergeRequest
     {
-        
         /// <summary>
         /// Gets the request configuration containing fields that all Gotenberg endpoints accept
         /// </summary>
         // ReSharper disable once MemberCanBeProtected.Global
-        public HttpMessageConfig Config { get; set; } = new HttpMessageConfig();
+        public RequestConfig Config { get; set; } = new RequestConfig();
 
         /// <summary>
         /// Key = file name; value = the document content

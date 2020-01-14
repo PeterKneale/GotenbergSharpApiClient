@@ -5,58 +5,58 @@ using JetBrains.Annotations;
 
 namespace Gotenberg.Sharp.API.Client.Domain.Builders
 {
-    public class DimensionBuilder : PdfRequestBuilder
+    public class DimensionBuilder<TRequest> : BaseBuilder<TRequest> where TRequest: class, IDimensional
     {
-        public DimensionBuilder(PdfRequest request)
+        public DimensionBuilder(TRequest request)
         {
             this.Request = request;
             this.Request.Dimensions ??= new DocumentDimensions();
         }
         
         [PublicAPI]
-        public DimensionBuilder PaperWidth(double width)
+        public DimensionBuilder<TRequest> PaperWidth(double width)
         {
             this.Request.Dimensions.PaperWidth = width;
             return this;
         }
 
         [PublicAPI]
-        public DimensionBuilder PaperHeight(double height)
+        public DimensionBuilder<TRequest> PaperHeight(double height)
         {
             this.Request.Dimensions.PaperHeight = height;
             return this;
         }
 
         [PublicAPI]
-        public DimensionBuilder MarginTop(double marginTop)
+        public DimensionBuilder<TRequest> MarginTop(double marginTop)
         {
             this.Request.Dimensions.MarginTop = marginTop;
             return this;
         }
 
         [PublicAPI]
-        public DimensionBuilder MarginBottom(double marginBottom)
+        public DimensionBuilder<TRequest> MarginBottom(double marginBottom)
         {
             this.Request.Dimensions.MarginBottom = marginBottom;
             return this;
         }
         
         [PublicAPI]
-        public DimensionBuilder MarginLeft(double marginLeft)
+        public DimensionBuilder<TRequest> MarginLeft(double marginLeft)
         {
             this.Request.Dimensions.MarginLeft = marginLeft;
             return this;
         }
         
         [PublicAPI]
-        public DimensionBuilder MarginRight(double marginRight)
+        public DimensionBuilder<TRequest> MarginRight(double marginRight)
         {
             this.Request.Dimensions.MarginRight = marginRight;
             return this;
         }
 
         [PublicAPI]
-        public DimensionBuilder LandScape(bool landscape)
+        public DimensionBuilder<TRequest> LandScape(bool landscape)
         {
             this.Request.Dimensions.Landscape = landscape;
             return this;
