@@ -12,7 +12,7 @@ namespace Gotenberg.Sharp.API.Client.Domain.Requests
     /// For URL to PDF conversions
     /// </summary>
   
-    public sealed class UrlRequest : IConvertToHttpContent, IDimensional, IConfigureRequests
+    public sealed class UrlRequest : IConfigureRequests, IConvertToHttpContent, IDimensional
     {
         [UsedImplicitly]
         public Uri Url { get; set; }
